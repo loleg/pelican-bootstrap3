@@ -34,21 +34,43 @@
 {% endblock %}
 
 {% block breadcrumbs %}
-    {% if DISPLAY_BREADCRUMBS %}
-    <ol class="breadcrumb">
-        <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
-	  {% if page.url %}
-        <li class="active">{{ page.title }}</li>
-	  {% endif %}
-    </ol>
-    {% endif %}
+  	<header class="page-header">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-xs-12">
+  					{% if 'tipue_search' in PLUGINS %}
+  						<div style="float:right"><span>
+  							<form class="navbar-search" action="{{ SEARCH_URL | default('/search.html') }}">
+  								<input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+  							</form></span>
+  						</div>
+  					{% endif %}
+            {% if DISPLAY_BREADCRUMBS %}
+  					<ol class="breadcrumb">
+  						<li class="item-home"><a class="bread-link bread-home" href="http://ogdch.begasoft.ch/de" title="Startseite">Startseite</a></li>
+  						{% if page.url %}
+  							<li class="item-2"><a href="{{ SITEURL }}" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
+  							<li class="item-3 active">{{ page.title }}</a></li>
+  						{% else %}
+  							<li class="item-2 active"><a href="{{ SITEURL }}" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
+  		        {% endif %}
+  					</ol>
+            {% endif %}
+  					<h1>
+  						{% if page.url %}
+  							{{ page.title }}
+  						{% elif not HIDE_SITENAME %}
+  							{{ SITENAME }}
+  		        {% endif %}
+  					</h1>
+  				</div>
+  			</div>
+  		</div>
+  	</header>
 {% endblock %}
 
 {% block content %}
     <section id="content" class="body">
-        {% if page.url %}
-          <h1 class="entry-title">{{ page.title }}</h1>
-        {% endif %}
         {% import 'includes/translations.html' as translations with context %}
         {{ translations.translations_for(page) }}
         {% if PDF_PROCESSOR %}
