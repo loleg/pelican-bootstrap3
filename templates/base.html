@@ -183,10 +183,10 @@
             {% if ABOUT_ME %}
                 {% include 'includes/aboutme.html' %}
             {% endif %}
-            { % if not HIDE_SIDEBAR %}
-                { % include 'includes/sidebar.html' %}
-            { % endif %}
-            {% include 'includes/contents.html' %}
+            {% if not HIDE_SIDEBAR %}
+                {% include 'includes/sidebar.html' %}
+            {% endif %}
+            {% include 'ogdch/contents.html' %}
             </aside>
         </div>
         {% endif %}
