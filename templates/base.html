@@ -166,6 +166,14 @@
         {% endif %}
         {% block breadcrumbs %}
         {% endblock %}
+
+        <!-- Temporary warning -->
+        <div class="alert alert-warning" role="alert">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Nota bene:</span>
+          You are looking at the preview website <b>for internal review only</b>, please <u>do not</u> forward this link.
+        </div>
+
         {% block content %}
         {% endblock %}
         </div>
@@ -175,9 +183,10 @@
             {% if ABOUT_ME %}
                 {% include 'includes/aboutme.html' %}
             {% endif %}
-            {% if not HIDE_SIDEBAR %}
-                {% include 'includes/sidebar.html' %}
-            {% endif %}
+            { % if not HIDE_SIDEBAR %}
+                { % include 'includes/sidebar.html' %}
+            { % endif %}
+            {% include 'includes/contents.html' %}
             </aside>
         </div>
         {% endif %}
