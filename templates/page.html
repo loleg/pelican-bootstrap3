@@ -48,16 +48,16 @@
             {% if DISPLAY_BREADCRUMBS %}
   					<ol class="breadcrumb">
   						<li class="item-home"><a class="bread-link bread-home" href="http://ogdch.begasoft.ch/de" title="Startseite">Startseite</a></li>
-  						{% if page.url %}
+  						{% if page.tags %}
   							<li class="item-2"><a href="{{ SITEURL }}" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
-  							<li class="item-3 active">{{ page.title }}</a></li>
+  							<li class="item-3 active">{{ page.category }}</a></li>
   						{% else %}
   							<li class="item-2 active"><a href="{{ SITEURL }}" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
   		        {% endif %}
   					</ol>
             {% endif %}
   					<h1>
-  						{% if page.url %}
+  						{% if page.title %}
   							{{ page.title }}
   						{% elif not HIDE_SITENAME %}
   							{{ SITENAME }}

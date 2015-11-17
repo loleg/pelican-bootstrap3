@@ -129,9 +129,12 @@
         {% endif %}
 
         <!-- Temporary warning -->
-        <div class="alert alert-warning" role="alert">
+        <div class="alert alert-warning alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <span class="sr-only">Nota bene:</span>
-          You are looking at the preview website <b>for internal review only</b>, please <u>do not</u> forward this link.
+          <a href="https://github.com/ogdch/ogd-handbook/issues" target="_blank">
+            You are looking at a beta website, please click here to report any issues.
+          </a>
         </div>
 
         {% block content %}
