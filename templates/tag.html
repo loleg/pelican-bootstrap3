@@ -5,11 +5,29 @@
     <meta name="keywords" content="{{ tag }}" />
 {% endblock %}
 {% block breadcrumbs %}
-    {% if DISPLAY_BREADCRUMBS %}
-    <ol class="breadcrumb">
-        <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
-        <li><a href="{{ SITEURL }}/{{ TAGS_URL }}" title="Tags">Tags</a></li>
-        <li class="active">{{ tag }}</li>
-    </ol>
-    {% endif %}
+  <header class="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          {% if 'tipue_search' in PLUGINS %}
+            <div style="float:right"><span>
+              <form class="navbar-search" action="{{ SEARCH_URL | default('/search.html') }}">
+                <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+              </form></span>
+            </div>
+          {% endif %}
+          {% if DISPLAY_BREADCRUMBS %}
+          <ol class="breadcrumb">
+            <li class="item-home"><a class="bread-link bread-home" href="http://ogdch.begasoft.ch/de" title="Startseite">Startseite</a></li>
+            <li class="item-2"><a href="{{ SITEURL }}" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
+            <li class="item-3 active"><a href="{{ SITEURL }}/{{ TAGS_URL }}" title="Tags">Tags</a></li>
+          </ol>
+          {% endif %}
+          <h1>
+            {{ tag }}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </header>
 {% endblock %}
