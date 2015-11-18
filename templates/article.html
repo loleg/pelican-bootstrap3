@@ -51,43 +51,49 @@
 {% endblock %}
 
 {% block breadcrumbs %}
-    {% if DISPLAY_BREADCRUMBS %}
-        {% if DISPLAY_CATEGORY_IN_BREADCRUMBS %}
-            <ol class="breadcrumb">
-                <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
-                <li><a href="{{ SITEURL }}/{{ article.category.url }}" title="{{ article.category }}">{{ article.category }}</a></li>
-                <li class="active">{{ article.title }}</li>
-            </ol>
-        {% else %}
-            <ol class="breadcrumb">
-                <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
-                <li class="active">{{ article.title }}</li>
-            </ol>
-        {% endif %}
-    {% endif %}
+  	<header class="page-header">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-xs-12">
+  					{% if 'tipue_search' in PLUGINS %}
+  						<div style="float:right"><span>
+  							<form class="navbar-search" action="{{ SEARCH_URL | default('/search.html') }}">
+  								<input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+  							</form></span>
+  						</div>
+  					{% endif %}
+            {% if DISPLAY_BREADCRUMBS %}
+  					<ol class="breadcrumb">
+  						<li class="item-home"><a class="bread-link bread-home" href="http://ogdch.begasoft.ch/de" title="Startseite">Startseite</a></li>
+							<li class="item-2"><a href="{{ SITEURL }}" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
+							<li class="item-3 active"><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></li>
+  					</ol>
+            {% endif %}
+  					<h1>
+  						{% if article.title %}
+  							{{ article.title }}
+  						{% elif not HIDE_SITENAME %}
+  							{{ SITENAME }}
+  		        {% endif %}
+  					</h1>
+  				</div>
+  			</div>
+  		</div>
+  	</header>
 {% endblock %}
 
 {% block content %}
-    <section id="content">
+    <section id="content" class="body">
         <article>
-            <header class="page-header">
-                <h1>
-                    <a href="{{ SITEURL }}/{{ article.url }}"
-                       rel="bookmark"
-                       title="Permalink to {{ article.title|striptags }}">
-                        {{ article.title }}
-                    </a>
-                </h1>
-            </header>
             <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
-                        {% include "includes/article_info.html" %}
-                    </div>
-                </div>
                 {{ article.content }}
             </div>
             <!-- /.entry-content -->
+            <div class="panel">
+                <div class="panel-body">
+                    {% include "includes/article_info.html" %}
+                </div>
+            </div>
             {% include 'includes/related-posts.html' %}
             {% include 'includes/series.html' %}
             {% include 'includes/addthis.html' %}
