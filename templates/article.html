@@ -65,8 +65,8 @@
             {% if DISPLAY_BREADCRUMBS %}
   					<ol class="breadcrumb">
   						<li class="item-home"><a class="bread-link bread-home" href="http://ogdch.begasoft.ch/de" title="Startseite">Startseite</a></li>
-							<li class="item-2"><a href="{{ SITEURL }}" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
-							<li class="item-3 active"><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></li>
+							<li class="item-2"><a href="{{ SITEURL }}/" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
+							<li class="item-3 active"><a href="{{ SITEURL }}/{{ article.category|lower }}/contents">{{ article.category }}</a></li>
   					</ol>
             {% endif %}
   					<h1>
@@ -83,6 +83,19 @@
 {% endblock %}
 
 {% block content %}
+
+{% if article.draft %}
+<!-- Page in progress warning -->
+    <div class="alert alert-info alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <a class="btn btn-primary btn-sm" href="http://www.ogdhandbook.ch/">Contribute</a>
+      <a class="btn btn-success btn-sm" href="https://github.com/ogdch/ogd-handbook/wiki/{{ article.slug }}">Edit</a>
+      &nbsp;
+      This is an early draft topic that needs more input.
+      Please consider adding your expertise here.
+    </div>
+{% endif %}
+
     <section id="content" class="body">
         <article>
             <div class="entry-content">
