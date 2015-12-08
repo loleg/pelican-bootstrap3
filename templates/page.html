@@ -47,12 +47,11 @@
   					{% endif %}
             {% if DISPLAY_BREADCRUMBS %}
   					<ol class="breadcrumb">
-  						<li class="item-home"><a class="bread-link bread-home" href="/" title="Startseite">Startseite</a></li>
   						{% if page.tags %}
-  							<li class="item-2"><a href="{{ SITEURL }}" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
-  							<li class="item-3 active">{{ page.category }}</a></li>
+                <li class="item-home"><a class="bread-link bread-home" href="{{ SITEURL }}/" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
+  							<li class="item-2 active">{{ page.category }}</a></li>
   						{% else %}
-  							<li class="item-2 active"><a href="{{ SITEURL }}" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
+                <li class="item-home active"><a class="bread-link bread-home" href="{{ SITEURL }}/" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
   		        {% endif %}
   					</ol>
             {% endif %}
@@ -71,13 +70,6 @@
 
 {% block content %}
     <section id="content" class="body">
-        {% import 'includes/translations.html' as translations with context %}
-        {{ translations.translations_for(page) }}
-        {% if PDF_PROCESSOR %}
-            <a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">
-                get the pdf
-            </a>
-        {% endif %}
         <div class="entry-content">
             {{ page.content }}
             {% if page.comments == 'enabled' %}
