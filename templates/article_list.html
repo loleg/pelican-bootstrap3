@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
     {% if articles %}
-      <div class="article-list">
+      <div class="row article-list">
         {% for article in (articles_page.object_list if articles_page else articles) %}
-            <article>
+            <article class="col-md-3">
                 <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
                 {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
                     <div class="well well-sm">
@@ -16,7 +16,7 @@
                 </div>
             </article>
         {% endfor %}
-        <article>
+        <article class="col-md-3">
           <span class="category-banner category-{{ category|lower }}"></span>
         </article>
       </div>
