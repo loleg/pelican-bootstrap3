@@ -218,6 +218,9 @@ figure.floatcenter, .align-center {
     }
 }
 
+/* Highlight color in top nav */
+span.logo-color { color: #009688; }
+
 /* Custom article_list formatting */
 .article-list article h2 {
   margin-top: 0px;
