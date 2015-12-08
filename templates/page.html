@@ -62,6 +62,11 @@
   							{{ SITENAME }}
   		        {% endif %}
   					</h1>
+            {% if page.summary %}
+            <div class="page-summary">
+              {{ page.summary }}
+            </div>
+            {% endif %}
   				</div>
   			</div>
   		</div>
