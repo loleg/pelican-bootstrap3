@@ -83,20 +83,29 @@
 
 {% block content %}
 
-{% if article.draft %}
-<!-- Page in progress warning -->
-    <div class="alert alert-info alert-dismissible" role="alert">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <a class="btn btn-primary btn-sm" href="http://www.ogdhandbook.ch/">Contribute</a>
-      <a class="btn btn-success btn-sm" href="https://github.com/ogdch/ogd-handbook/wiki/{{ article.slug }}">Edit</a>
-      &nbsp;
-      This is an early draft topic that needs more input.
-      Please consider adding your expertise here.
-    </div>
+{% if article.summary %}
+  <a href="{{ SITEURL }}/category/{{ article.category|lower }}">
+    <span class="category-banner category-{{ article.category|lower }}"></span>
+  </a>
 {% endif %}
 
     <section id="content" class="body">
         <article>
+            {% if article.summary %}
+              <div class="entry-summary">
+                  {{ article.summary }}
+              </div>
+              {% if article.draft %}
+              <!-- Page in progress warning -->
+              <div class="alert alert-default" role="alert">
+                <a class="btn btn-primary btn-sm" href="http://www.ogdhandbook.ch/">Contribute</a>
+                <a class="btn btn-success btn-sm" href="https://github.com/ogdch/ogd-handbook/wiki/{{ article.slug }}">Edit</a>
+                &nbsp;
+                This is an early draft topic that needs more input.
+                Please consider adding your expertise here.
+              </div>
+              {% endif %}
+            {% endif %}
             <div class="entry-content">
                 {{ article.content }}
             </div>
