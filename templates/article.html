@@ -83,11 +83,11 @@
 
 {% block content %}
 
-{% if article.summary %}
-  <a href="{{ SITEURL }}/category/{{ article.category|lower }}">
-    <span class="category-banner category-{{ article.category|lower }}"></span>
-  </a>
-{% endif %}
+  {% if article.handbook %}
+    <a href="{{ SITEURL }}/category/{{ article.category|lower }}">
+      <span class="category-banner category-{{ article.category|lower }}"></span>
+    </a>
+  {% endif %}
 
     <section id="content" class="body">
         <article>
