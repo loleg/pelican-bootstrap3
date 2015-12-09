@@ -6,13 +6,16 @@ span.logo-color { color: #009688; }
   margin-top: 0px;
 }
 .article-list article {
+  padding: 5px;
+}
+.article-list article .wrapper {
   vertical-align: top;
-  margin: 5px;
+  overflow: hidden;
   padding: 10px;
-  min-height: 20em;
+  height: 20em;
   border: 2px solid #eee;
 }
-.article-list article:hover {
+.article-list article .wrapper:hover {
   border: 2px solid #009688;
 }
 
@@ -30,10 +33,11 @@ span.logo-color { color: #009688; }
   background-repeat: no-repeat;
   background-position: center;
 }
-.category-identify { background-image: url(/theme/ogdch/category-identify.png); }
-.category-legal { background-image: url(/theme/ogdch/category-legal.png); }
-.category-publish { background-image: url(/theme/ogdch/category-publish.png); }
-.category-promote { background-image: url(/theme/ogdch/category-promote.png); }
+.category-banner.category-identify { background-image: url(/theme/ogdch/category-identify.png); }
+.category-banner.category-legal { background-image: url(/theme/ogdch/category-legal.png); }
+.category-banner.category-publish { background-image: url(/theme/ogdch/category-publish.png); }
+.category-banner.category-support { background-image: url(/theme/ogdch/category-support.png); }
+.category-banner.category-library { background-image: url(/theme/ogdch/category-library.png); }
 
 /* Styles for library articles */
 .library-info {
