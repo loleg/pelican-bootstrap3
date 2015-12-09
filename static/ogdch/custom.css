@@ -30,10 +30,10 @@ span.logo-color { color: #009688; }
   background-repeat: no-repeat;
   background-position: center;
 }
-.category-collect { background-image: url(/theme/ogdch/category-collect.png); }
+.category-identify { background-image: url(/theme/ogdch/category-identify.png); }
 .category-legal { background-image: url(/theme/ogdch/category-legal.png); }
 .category-publish { background-image: url(/theme/ogdch/category-publish.png); }
-.category-discover { background-image: url(/theme/ogdch/category-discover.png); }
+.category-promote { background-image: url(/theme/ogdch/category-promote.png); }
 
 /* Styles for library articles */
 .library-info {
