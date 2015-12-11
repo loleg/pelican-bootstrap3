@@ -50,3 +50,19 @@ span.logo-color { color: #009688; }
 .library-info .label-default {
   border: none;
 }
+
+/* Clear backgrond image on front page */
+.front-header .container {
+  background-image: none;
+  padding: 20px 0px;
+}
+
+/* Fix mobile handbook logo */
+@media (max-width: 992px)
+#main-navigation .navbar-brand {
+    max-width: 85%;
+}
+@media (max-width: 992px)
+#main-navigation .navbar-brand img {
+    max-width: 100%;
+}

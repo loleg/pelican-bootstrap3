@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} - {{ SITENAME }}{% endblock %}
+{% block html_lang %}{{ page.lang }}{% endblock %}
+{% block meta %}
+    {% if page.author %}
+        <meta name="author" content="{{ page.author }}" />
+    {% else %}
+        <meta name="author" content="{{ AUTHOR }}" />
+    {% endif %}
+    {% if page.summary %}
+        <meta name="description" content="{{ page.summary|striptags|escape }}" />
+    {% endif %}
+{% endblock %}
+{% block opengraph %}
+    {% if OPEN_GRAPH_FB_APP_ID %}
+        <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}"/>
+    {% endif %}
+    <meta property="og:site_name" content="{{ SITENAME }}" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ page.title|striptags|escape }}"/>
+    <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}"/>
+    <meta property="og:description" content="{{ page.summary|striptags|escape }}" />
+    {% if page.og_image %}
+        <meta property="og:image"
+              content="{{ SITEURL }}/{{ page.og_image }}"/>
+    {% elif OPEN_GRAPH_IMAGE %}
+        <meta property="og:image"
+              content="{{ SITEURL }}/{{ OPEN_GRAPH_IMAGE }}"/>
+    {% endif %}
+{% endblock %}
+
+{% block canonical_rel %}
+<link rel="canonical" href="{{ SITEURL }}/{{ page.url }}">
+{% endblock %}
+
+{% block breadcrumbs %}
+  	<header class="page-header front-header">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-md-6">
+
+  					<h1>
+  						{% if page.title %}
+  							{{ page.title }}
+  						{% elif not HIDE_SITENAME %}
+  							{{ SITENAME }}
+  		        {% endif %}
+  					</h1>
+            {% if page.summary %}
+            <p class="lead page-summary">
+              {{ page.summary }}
+            </p>
+            <!-- <a class="btn btn-default-inverted" href="http://ogdch.begasoft.ch/en/faq" role="button">Learn more about opendata.swiss</a> -->
+            {% endif %}
+  				</div>
+          <div class="col-md-offset-1 col-md-5 text-md-right text-xs-center">
+  					<!-- <div class="headline">
+  						<div id="opendata-count" style="font-size: 98.4211px;">68</div>
+  						<div class="title">Open Datasets</div>
+  					</div> -->
+            {% if 'tipue_search' in PLUGINS %}
+              <form class="navbar-search" role="search" action="{{ SEARCH_URL | default('/search.html') }}">
+                <div class="form-group has-feedback">
+                  <input type="search" class="form-control input-lg" name="q" placeholder="Search topics..." id="tipue_search_input" required>
+                  <i class="fa fa-search form-control-feedback" aria-hidden="true"></i>
+                </div>
+              </form>
+            {% endif %}
+          </div>
+  			</div>
+  		</div>
+  	</header>
+{% endblock %}
+
+{% block content %}
+    <section id="content" class="body">
+        <div class="entry-content">
+            {{ page.content }}
+            {% if page.comments == 'enabled' %}
+                {% include 'includes/comments.html' %}
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}
