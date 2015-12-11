@@ -54,14 +54,14 @@
             {% endif %}
   				</div>
           <div class="col-md-offset-1 col-md-5 text-md-right text-xs-center">
-  					<!-- <div class="headline">
-  						<div id="opendata-count" style="font-size: 98.4211px;">68</div>
-  						<div class="title">Open Datasets</div>
-  					</div> -->
+  					<div class="headline">
+  						<div id="opendata-count" style="font-size: 98.4211px;">&nbsp;</div>
+  						<div class="title">&nbsp;</div>
+  					</div>
             {% if 'tipue_search' in PLUGINS %}
-              <form class="navbar-search" role="search" action="{{ SEARCH_URL | default('/search.html') }}">
+              <form class="navbar-search" role="search" action="{{ SEARCH_URL | default('/search.html') }}"  onsubmit="return (this.elements['q'].value.length > 0)">
                 <div class="form-group has-feedback">
-                  <input type="search" class="form-control input-lg" name="q" placeholder="Search topics..." id="tipue_search_input" required>
+                  <input type="search" class="form-control input-lg" name="q" placeholder="Search topics..." id="q" required>
                   <i class="fa fa-search form-control-feedback" aria-hidden="true"></i>
                 </div>
               </form>
