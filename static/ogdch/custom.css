@@ -15,8 +15,11 @@ span.logo-color { color: #009688; }
   height: 20em;
   border: 2px solid #eee;
 }
-.article-list article .wrapper:hover {
+.article-list a article .wrapper:hover {
   border: 2px solid #009688;
+}
+.article-list a article p {
+  color: black;
 }
 
 /* Category banner at top of article.html */
