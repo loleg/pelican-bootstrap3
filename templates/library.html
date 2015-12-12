@@ -55,13 +55,6 @@
   		<div class="container">
   			<div class="row">
   				<div class="col-xs-12">
-  					{% if 'tipue_search' in PLUGINS %}
-  						<div style="float:right"><span>
-  							<form class="navbar-search" action="{{ SEARCH_URL | default('/search.html') }}">
-  								<input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
-  							</form></span>
-  						</div>
-  					{% endif %}
             {% if DISPLAY_BREADCRUMBS %}
   					<ol class="breadcrumb">
               <li class="item-home"><a class="bread-link bread-home" href="{{ SITEURL }}/" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
