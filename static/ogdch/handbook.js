@@ -5,9 +5,9 @@ $(document).ready(function() {
     var $curlang = $('#lang-switch li[lang="' + lang + '"]').addClass('active');
     $('#lang-button .name').html($curlang.text());
 
-    var DEFAULT_LANG = 'de';
-    if (lang !== DEFAULT_LANG) { $('.lang-' + DEFAULT_LANG).addClass('hidden'); }
-    $('.lang-' + lang).removeClass('hidden');
+    // var DEFAULT_LANG = 'de';
+    // if (lang !== DEFAULT_LANG) { $('.lang-' + DEFAULT_LANG).addClass('hidden'); }
+    // $('.lang-' + lang).removeClass('hidden');
 });
 
 function validateForm(query) {
