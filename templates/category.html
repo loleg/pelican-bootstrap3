@@ -15,7 +15,8 @@
   					</ol>
             {% endif %}
   					<h1>
-              {{ category }}
+              {% import 'ogdch/categories.html' as categories with context %}
+              {{ categories.translations_for(category) }}
             </h1>
   				</div>
   			</div>

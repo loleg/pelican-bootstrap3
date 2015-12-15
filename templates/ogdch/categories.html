@@ -1,0 +1,17 @@
+{% macro translations_for(category) %}
+	{% if category|trim|lower == "identify" %}
+	<span class="lang-de">Identifizieren</span>
+	<span class="lang-en">Identify</span>
+	{% elif category|trim|lower == "establish" %}
+	<span class="lang-de">Etablieren</span>
+	<span class="lang-en">Establish</span>
+	{% elif category|trim|lower == "publish" %}
+	<span class="lang-de">Publizieren</span>
+	<span class="lang-en">Publish</span>
+	{% elif category|trim|lower == "support" %}
+	<span class="lang-de">Supporten</span>
+	<span class="lang-en">Support</span>
+	{% else %}
+	{{ category }}
+	{% endif %}
+{% endmacro %}

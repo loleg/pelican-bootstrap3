@@ -44,7 +44,8 @@
                 <li class="item-home"><a class="bread-link bread-home" href="{{ SITEURL }}/" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
   							<li class="item-2 active">
                   <a href="{{ SITEURL }}/category/{{ page.category|lower }}">
-                    {{ page.category }}
+                    {% import 'ogdch/categories.html' as categories with context %}
+                    {{ categories.translations_for(page.category) }}
                   </a></li>
   		        {% endif %}
   					</ol>

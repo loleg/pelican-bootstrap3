@@ -40,7 +40,10 @@
     {% if SHOW_ARTICLE_CATEGORY %}
         <span class="label label-default">Category</span>
         <span class="category">
-          <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+          <a href="{{ SITEURL }}/{{ article.category.url }}">
+            {% import 'categories.html' as categories with context %}
+            {{ categories.translations_for(article.category) }}
+          </a>
         </span>
         <br>
     {% endif %}
