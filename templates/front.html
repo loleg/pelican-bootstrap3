@@ -37,22 +37,18 @@
   	<header class="page-header front-header">
   		<div class="container">
   			<div class="row">
-  				<div class="col-md-6">
-  					<h1>
-  						{% if page.title %}
-  							{{ page.title }}
-  						{% elif not HIDE_SITENAME %}
-  							{{ SITENAME }}
-  		        {% endif %}
-  					</h1>
+  				<div class="col-md-7">
+						{% if page.title %}
+							<h2>{{ page.title }}</h2>
+						{% elif not HIDE_SITENAME %}
+							<h1>{{ SITENAME }}</h1>
+		        {% endif %}
             {% if page.summary %}
-            <p class="lead page-summary">
-              {{ page.summary }}
-            </p>
-            <!-- <a class="btn btn-default-inverted" href="http://ogdch.begasoft.ch/en/faq" role="button">Learn more about opendata.swiss</a> -->
+              <div class="lead">{{ page.summary }}</div>
+              <!-- <a class="btn btn-default-inverted" href="http://ogdch.begasoft.ch/en/faq" role="button">Learn more about opendata.swiss</a> -->
             {% endif %}
   				</div>
-          <div class="col-md-offset-1 col-md-5 text-md-right text-xs-center">
+          <div class="col-md-5 text-md-right text-xs-center">
   					<div class="headline">
   						<div id="opendata-count" style="font-size: 98.4211px;">&nbsp;</div>
   						<div class="title">&nbsp;</div>

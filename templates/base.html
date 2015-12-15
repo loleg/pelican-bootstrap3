@@ -62,6 +62,7 @@
       {% endif %}
       <!-- <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/font-awesome.min.css" rel="stylesheet"> -->
     {% else %}
+      <link rel='stylesheet' id='font_source_sans_pro-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic' type='text/css' media='all' />
       <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/ogdch/app.css" rel="stylesheet">
       <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/ogdch/custom.css" rel="stylesheet">
     {% endif %}
@@ -128,18 +129,6 @@
         {% else %}
         <div class="col-lg-12">
         {% endif %}
-
-        <!-- Temporary warning -->
-        <div class="alert alert-warning alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <span class="sr-only">Nota bene:</span>
-          <a href="https://github.com/ogdch/ogd-handbook/issues" target="_blank">
-
-            <span class="lang-de">Sie sind an einem Beta-Website suchen, berichten Sie bitte alle Probleme hier.</span>
-            <span class="lang-en">You are looking at a beta website, please report any issues here.</span>
-
-          </a>
-        </div>
 
         {% block content %}
         {% endblock %}
