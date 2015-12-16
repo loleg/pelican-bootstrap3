@@ -56,7 +56,7 @@
             {% if 'tipue_search' in PLUGINS %}
               <form class="navbar-search" role="search" action="{{ SEARCH_URL | default('/search.html') }}"  onsubmit="return (this.elements['q'].value.length > 0)">
                 <div class="form-group has-feedback">
-                  <input type="search" class="form-control input-lg" name="q" placeholder="Search topics..." id="q" required>
+                  <input type="search" class="form-control input-lg" name="q" placeholder="{% trans %}Search topics{% endtrans %}..." id="q" required>
                   <i class="fa fa-search form-control-feedback" aria-hidden="true"></i>
                 </div>
               </form>

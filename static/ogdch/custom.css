@@ -1,8 +1,3 @@
-/* i18n support */
-html .lang-en, html .lang-de, html .lang-fr, html .lang-it { display: none; }
-html[lang='en'] .lang-en { display: inherit; }
-html[lang='de'] .lang-de { display: inherit; }
-
 /* Highlight color in top nav */
 span.logo-color { color: #009688; }
 

@@ -1,17 +1,15 @@
 {% macro translations_for(category) %}
 	{% if category|trim|lower == "identify" %}
-	<span class="lang-de">Identifizieren</span>
-	<span class="lang-en">Identify</span>
+		{% trans %}Identify{% endtrans %}
 	{% elif category|trim|lower == "establish" %}
-	<span class="lang-de">Etablieren</span>
-	<span class="lang-en">Establish</span>
+		{% trans %}Establish{% endtrans %}
 	{% elif category|trim|lower == "publish" %}
-	<span class="lang-de">Publizieren</span>
-	<span class="lang-en">Publish</span>
+		{% trans %}Publish{% endtrans %}
 	{% elif category|trim|lower == "support" %}
-	<span class="lang-de">Supporten</span>
-	<span class="lang-en">Support</span>
+		{% trans %}Support{% endtrans %}
+	{% elif category|trim|lower == "library" %}
+		{% trans %}Library{% endtrans %}
 	{% else %}
-	{{ category }}
+		{{ category }}
 	{% endif %}
 {% endmacro %}
