@@ -71,6 +71,28 @@
     <section id="content" class="body">
         <div class="entry-content">
             {{ page.content }}
+
+            <img src="/images/OGD_graphics-01.png" style="width:100%">
+
+            <table id="front-table"><tr>
+            {% for category, articles in categories %}
+            {% if category|trim|lower != "library" %}
+            <td width="25%">
+              {% for article in articles %}
+              <p><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></p>
+              {% endfor %}
+            </td>
+            {% endif %}
+            {% endfor %}
+            </tr></table>
+
+            <center>
+            <a class="btn btn-default" href="mailto:info@ogdhandbook.ch" role="button">Ask a question</a>
+            <a class="btn btn-primary" href="/en/category/library">Library</a>
+            <a class="btn btn-primary" href="/en/library/glossary">Glossary</a>
+            <a class="btn btn-default" href="/en/pages/contribute">Contribute</a>
+            </center>
+
             {% if page.comments == 'enabled' %}
                 {% include 'includes/comments.html' %}
             {% endif %}
