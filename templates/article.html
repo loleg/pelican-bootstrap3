@@ -57,7 +57,7 @@
   				<div class="col-xs-12">
             {% if DISPLAY_BREADCRUMBS %}
   					<ol class="breadcrumb">
-							<li class="item-home"><a class="bread-link bread-home" href="{{ SITEURL }}/" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
+							<li class="item-home"><a class="bread-link bread-home" href="{{ SITEURL }}/{{ DEFAULT_LANG }}/pages/index" title="{{ SITENAME }}">{{ SITENAME }}</a></li>
 							<li class="item-2 active">
                 <a href="{{ SITEURL }}/category/{{ article.category|lower }}">
                   {% import 'ogdch/categories.html' as categories with context %}
@@ -95,8 +95,8 @@
               {% if article.draft %}
               <!-- Page in progress warning -->
               <div class="alert alert-default" role="alert">
-                <a class="btn btn-primary btn-sm" href="http://www.ogdhandbook.ch/">Contribute</a>
-                <a class="btn btn-success btn-sm" href="https://github.com/opendata-swiss/ogd-handbook-wiki/blob/master/{{ article.slug }}">Edit</a>
+                <a class="btn btn-primary btn-sm" href="/{{ DEFAULT_LANG }}/pages/contribute">Contribute</a>
+                <a class="btn btn-success btn-sm" target="_blank" href="https://github.com/opendata-swiss/ogd-handbook-wiki/blob/master/{{ article.slug }}.md">Edit</a>
                 &nbsp;
                 This is an early draft topic that needs more input.
                 Please consider adding your expertise here.
