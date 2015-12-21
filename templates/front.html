@@ -45,7 +45,7 @@
 		        {% endif %}
             {% if page.summary %}
               <div class="lead">{{ page.summary }}</div>
-              <!-- <a class="btn btn-default-inverted" href="http://ogdch.begasoft.ch/en/faq" role="button">Learn more about opendata.swiss</a> -->
+              <a class="btn btn-default-inverted" href="/category/identify" role="button">Start reading</a>
             {% endif %}
   				</div>
           <div class="col-md-5 text-md-right text-xs-center">
@@ -67,35 +67,56 @@
   	</header>
 {% endblock %}
 
+{% macro list_articles(articles) %}
+  <td width="25%">
+    {% for article in articles %}
+    <p><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></p>
+    {% endfor %}
+  </td>
+{% endmacro %}
+
 {% block content %}
     <section id="content" class="body">
         <div class="entry-content">
-            {{ page.content }}
+          {{ page.content }}
 
-            <img src="/images/OGD_graphics-01.png" style="width:100%">
+          <div id="front-wrapper">
+            <img src="/images/OGD_graphics-01.png">
 
             <table id="front-table"><tr>
             {% for category, articles in categories %}
-            {% if category|trim|lower != "library" %}
-            <td width="25%">
-              {% for article in articles %}
-              <p><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></p>
-              {% endfor %}
-            </td>
+            {% if category|trim|lower == "identify" %}
+              {{ list_articles(articles) }}
+            {% endif %}
+            {% endfor %}
+            {% for category, articles in categories %}
+          	{% if category|trim|lower == "establish" %}
+              {{ list_articles(articles) }}
+            {% endif %}
+            {% endfor %}
+            {% for category, articles in categories %}
+          	{% if category|trim|lower == "publish" %}
+              {{ list_articles(articles) }}
+            {% endif %}
+            {% endfor %}
+            {% for category, articles in categories %}
+          	{% if category|trim|lower == "support" %}
+              {{ list_articles(articles) }}
             {% endif %}
             {% endfor %}
             </tr></table>
+          </div>
 
-            <center>
-            <a class="btn btn-default" href="mailto:info@ogdhandbook.ch" role="button">Ask a question</a>
-            <a class="btn btn-primary" href="/en/category/library">Library</a>
-            <a class="btn btn-primary" href="/en/library/glossary">Glossary</a>
-            <a class="btn btn-default" href="/en/pages/contribute">Contribute</a>
-            </center>
+          <center>
+          <a class="btn btn-default" href="mailto:info@ogdhandbook.ch" role="button">Ask a question</a>
+          <a class="btn btn-primary" href="/en/category/library">Library</a>
+          <a class="btn btn-primary" href="/en/library/glossary">Glossary</a>
+          <a class="btn btn-default" href="/en/pages/contribute">Contribute</a>
+          </center>
 
-            {% if page.comments == 'enabled' %}
-                {% include 'includes/comments.html' %}
-            {% endif %}
+          {% if page.comments == 'enabled' %}
+              {% include 'includes/comments.html' %}
+          {% endif %}
         </div>
     </section>
 {% endblock %}

@@ -82,8 +82,17 @@ span.logo-color { color: #009688; }
   padding-top: 20px;
   padding-bottom: 20px;
 }
+#front-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+#front-wrapper img {
+  width: 100%;
+  min-width: 40em;
+}
 #front-table {
-  width: 96%;
+  width: 95%;
+  min-width: 39em;
   margin-left: 5%;
 }
 #front-table td {
