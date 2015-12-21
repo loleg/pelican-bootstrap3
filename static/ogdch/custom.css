@@ -57,9 +57,23 @@ span.logo-color { color: #009688; }
   border: 1px solid #aaa;
   border-radius: 10px;
 }
-
 .library-info .label-default {
   border: none;
+}
+
+/* Styles for library references */
+.block-block {
+  height: 6em;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  max-width: 30em;
+}
+.block-block a { display: block; }
+.block-block .fa {
+  font-size: 4em;
+  margin-right: 0.5em;
+  float: left;
+  color: #eee;
 }
 
 /* Clear backgrond image on front page */

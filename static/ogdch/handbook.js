@@ -5,9 +5,12 @@ $(document).ready(function() {
     var $curlang = $('#lang-switch li[lang="' + lang + '"]').addClass('active');
     $('#lang-button .name').html($curlang.text());
 
-    // var DEFAULT_LANG = 'de';
-    // if (lang !== DEFAULT_LANG) { $('.lang-' + DEFAULT_LANG).addClass('hidden'); }
-    // $('.lang-' + lang).removeClass('hidden');
+    $('blockquote > blockquote').each(function() {
+      $(this).parent()
+        .html($(this).html())
+        .addClass('block-block')
+        .prepend('<i class="fa fa-file-text-o"></i>');
+    });
 });
 
 function validateForm(query) {
