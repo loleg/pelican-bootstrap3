@@ -15,6 +15,10 @@ $(document).ready(function() {
           .prepend('<i class="fa fa-bookmark-o"></i>&nbsp;');
       }
     });
+
+    $('checkbox')
+      .prepend('<i class="fa fa-check-circle-o"></i>')
+      .click(function() { $(this).toggleClass('active'); });
 });
 
 function validateForm(query) {

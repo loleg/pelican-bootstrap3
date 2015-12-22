@@ -66,6 +66,11 @@ span.logo-color { color: #009688; }
   border: none;
 }
 
+/* Checklists */
+
+checkbox.active .fa { color: #009688; }
+checkbox a .fa { display: none; }
+
 /* Clear backgrond image on front page */
 .front-header .container {
   background-image: none;
