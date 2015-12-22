@@ -52,9 +52,10 @@ span.logo-color { color: #009688; }
 .category-banner.category-support { background-image: url(/theme/ogdch/category-support.png); }
 .category-banner.category-library { background-image: url(/theme/ogdch/category-library.png); }
 
-.category-next {
-    float: right;
-}
+.category-next { float: right; }
+.category-next .category-banner { margin: 0px; }
+.category-next h5 { text-align: center; }
+.category-next h5 span {  color: black; }
 
 /* Styles for library articles */
 .library-info {
