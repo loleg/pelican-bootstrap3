@@ -17,8 +17,13 @@ $(document).ready(function() {
     });
 
     $('checkbox')
-      .prepend('<i class="fa fa-check-circle-o"></i>')
-      .click(function() { $(this).toggleClass('active'); });
+      .prepend('<i class="fa fa-circle-o"></i>')
+      .click(function() {
+        $(this).toggleClass('active')
+          .find('.fa:first')
+            .toggleClass('fa-circle-o')
+            .toggleClass('fa-check-circle-o');
+      });
 });
 
 function validateForm(query) {
