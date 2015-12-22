@@ -5,11 +5,15 @@ $(document).ready(function() {
     var $curlang = $('#lang-switch li[lang="' + lang + '"]').addClass('active');
     $('#lang-button .name').html($curlang.text());
 
-    $('blockquote > blockquote').each(function() {
-      $(this).parent()
-        .html($(this).html())
-        .addClass('block-block')
-        .prepend('<i class="fa fa-file-text-o"></i>');
+    $('.page .entry-content a[href^="/"]').each(function() {
+      var href = $(this).attr('href');
+      if (href.indexOf('/library/') >= 0) {
+        $(this).addClass('library-ref')
+          .prepend('<i class="fa fa-file-text-o"></i>&nbsp;');
+      } else if (href.indexOf('/pages/') < 0) {
+        $(this).addClass('article-ref')
+          .prepend('<i class="fa fa-bookmark-o"></i>&nbsp;');
+      }
     });
 });
 
