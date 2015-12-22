@@ -52,6 +52,10 @@ span.logo-color { color: #009688; }
 .category-banner.category-support { background-image: url(/theme/ogdch/category-support.png); }
 .category-banner.category-library { background-image: url(/theme/ogdch/category-library.png); }
 
+.category-next {
+    float: right;
+}
+
 /* Styles for library articles */
 .library-info {
   border: 1px solid #aaa;

@@ -2,6 +2,11 @@
 {% block content %}
     {% if articles %}
       <div class="row article-list">
+        <article class="col-md-4">
+          <div class="wrapper">
+            <span class="category-banner category-{{ category|lower }}"></span>
+          </div>
+        </article>
         {% for article in (articles_page.object_list if articles_page else articles) %}
         <a href="{{ SITEURL }}/{{ article.url }}">
           <article class="col-md-4">
@@ -20,11 +25,18 @@
           </article>
         </a>
         {% endfor %}
-        <article class="col-md-4">
-          <div class="wrapper">
-            <span class="category-banner category-{{ category|lower }}"></span>
-          </div>
-        </article>
+      </div>
+
+      <div class="category-next">
+        {% import 'ogdch/categories.html' as categories with context -%}
+        {% set next_category = categories.next_category(category) -%}
+        <a href="{{ SITEURL }}/category/{{ next_category|lower }}">
+          <span class="category-banner category-{{ next_category|lower }}"></span>
+          <h5>
+            {{ next_category }}
+            &gt;&gt;
+          </h5>
+        </a>
       </div>
     {% endif %}
 

@@ -13,3 +13,17 @@
 		{{ category }}
 	{% endif %}
 {% endmacro %}
+
+{% macro next_category(category) -%}
+	{% if category|trim|lower == "identify" %}
+		{% trans %}Establish{% endtrans %}
+	{% elif category|trim|lower == "establish" %}
+		{% trans %}Publish{% endtrans %}
+	{% elif category|trim|lower == "publish" %}
+		{% trans %}Support{% endtrans %}
+	{% elif category|trim|lower == "support" %}
+		{% trans %}Identify{% endtrans %}
+	{% else %}
+		{{ category }}
+	{% endif %}
+{% endmacro -%}
