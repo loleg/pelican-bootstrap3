@@ -70,7 +70,17 @@ span.logo-color { color: #009688; }
 
 checkbox { cursor: pointer; }
 checkbox.active .fa { color: #009688; }
-/*checkbox a .fa { display: none; }*/
+
+/* Tag lists */
+
+.btn-sm {
+  font-weight: normal;
+  border: 1px solid #eee;
+  background: #fafafa;
+  margin-bottom: 0.3em;
+  color: #444;
+}
+.btn-sm:hover { color: #009688; }
 
 /* Clear backgrond image on front page */
 .front-header .container {

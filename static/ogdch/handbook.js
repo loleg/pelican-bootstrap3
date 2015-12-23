@@ -10,6 +10,9 @@ $(document).ready(function() {
       if (href.indexOf('/library/') >= 0) {
         $(this).addClass('library-ref')
           .prepend('<i class="fa fa-file-text-o"></i>&nbsp;');
+      } else if (href.indexOf('/tag/') >= 0) {
+        $(this).addClass('tags-ref')
+          .prepend('<i class="fa fa-tag"></i>&nbsp;');
       } else if (href.indexOf('/pages/') < 0) {
         $(this).addClass('article-ref')
           .prepend('<i class="fa fa-bookmark-o"></i>&nbsp;');
@@ -24,6 +27,8 @@ $(document).ready(function() {
             .toggleClass('fa-circle-o')
             .toggleClass('fa-check-circle-o');
       });
+
+    $('tags a').addClass('btn btn-sm');
 });
 
 function validateForm(query) {
