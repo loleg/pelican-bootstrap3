@@ -33,7 +33,7 @@ msgstr "Publizieren"
 
 #: ../templates/ogdch/categories.html:9 ../templates/ogdch/navbar.html:30
 msgid "Support"
-msgstr "Publizieren"
+msgstr "Supporten"
 
 #: ../templates/ogdch/categories.html:11
 msgid "Library"
@@ -57,5 +57,4 @@ msgstr ""
 #: ../templates/ogdch/navbar.html:40
 msgid "You are looking at a beta website, please report any issues here."
 msgstr ""
-"Sie sind an einem Beta-Website suchen, berichten Sie bitte alle Probleme "
-"hier."
+"Sie sind auf einem Beta-Website, bitte mit Verbesserungsvorschläge hier melden."
