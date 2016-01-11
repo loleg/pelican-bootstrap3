@@ -19,15 +19,9 @@ msgid "Library"
 msgstr ""
 
 #: ../templates/ogdch/footer.html:27
-msgid ""
-"The Swiss Open Government Data (OGD) Handbook is being developed on the "
-"basis of documentation and reports produced during the OGD Switzerland "
-"project. This is an evolving knowledge base providing central access to "
-"learning resources supporting individuals with responsibilities for data "
-"publishing at government offices nationwide."
+msgid "FOOTER_TEXT"
 msgstr ""
 
 #: ../templates/ogdch/navbar.html:40
 msgid "You are looking at a beta website, please report any issues here."
 msgstr ""
-

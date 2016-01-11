@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-16 07:08+0100\n"
+"POT-Creation-Date: 2016-01-11 16:22+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -39,12 +39,7 @@ msgid "Library"
 msgstr ""
 
 #: ../templates/ogdch/footer.html:27
-msgid ""
-"The Swiss Open Government Data (OGD) Handbook is being developed on the "
-"basis of documentation and reports produced during the OGD Switzerland "
-"project. This is an evolving knowledge base providing central access to "
-"learning resources supporting individuals with responsibilities for data "
-"publishing at government offices nationwide."
+msgid "FOOTER_TEXT"
 msgstr ""
 
 #: ../templates/ogdch/navbar.html:40
