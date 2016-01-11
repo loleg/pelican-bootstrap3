@@ -1,6 +1,7 @@
 /* Highlight color in top nav */
 span.logo-color { color: #009688; }
 
+/* Floating (beta) alert */
 .alert-floating {
   position: fixed;
   bottom: 0px;
@@ -78,12 +79,10 @@ span.logo-color { color: #009688; }
 }
 
 /* Checklists */
-
 checkbox { cursor: pointer; }
 checkbox.active .fa { color: #009688; }
 
 /* Tag lists */
-
 .btn-sm {
   font-weight: normal;
   border: 1px solid #eee;
@@ -92,6 +91,9 @@ checkbox.active .fa { color: #009688; }
   color: #444;
 }
 .btn-sm:hover { color: #009688; }
+
+/* Ensure links are readable on splash page */
+.front-header .lead a { color: white; }
 
 /* Clear backgrond image on front page */
 .front-header .container {
