@@ -3,10 +3,18 @@
 {% block title %}Articles by {{ author }} - {{ SITENAME }}{% endblock %}
 
 {% block breadcrumbs %}
-    {% if DISPLAY_BREADCRUMBS %}
-        <ol class="breadcrumb">
-            <li><a href="{{ SITEURL }}/{{ AUTHORS_URL|default('authors.html') }}" title="Authors">Authors</a></li>
-            <li class="active">{{ AUTHOR }}</li>
-        </ol>
-    {% endif %}
+    <header class="page-header">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-xs-12">
+            {% if DISPLAY_BREADCRUMBS %}
+                <ol class="breadcrumb">
+                    <li><a href="{{ SITEURL }}/{{ AUTHORS_URL|default('authors.html') }}" title="Authors">Authors</a></li>
+                    <li class="active">{{ author }}</li>
+                </ol>
+            {% endif %}
+  				</div>
+  			</div>
+  		</div>
+  	</header>
 {% endblock %}

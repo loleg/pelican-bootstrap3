@@ -106,7 +106,7 @@
     {% endif %}
 
 </head>
-<body class="page page-id-97 page-template-default">
+<body class="page page-template-default{% if page %} page-{{ page.slug }}{% endif %}{% if article %} article-{{ article.slug }}{% endif %}">
 
 {% include 'ogdch/navbar.html' %}
 

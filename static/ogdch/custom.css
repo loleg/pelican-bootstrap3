@@ -138,3 +138,10 @@ checkbox.active .fa { color: #009688; }
     margin-top: -4.5em;
   }
 }
+
+/* Page-specific styles --- */
+.article-glossary .entry-content p {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+/* --- Page-specific styles */
