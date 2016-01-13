@@ -1,4 +1,6 @@
 <footer class="post-info">
+    {% include 'includes/taglist.html' %}
+
     <span class="label label-default">
       Published</span>
     <span class="published">
@@ -31,7 +33,8 @@
             <span class="label label-default">
               Author(s)</span>
             <span class="author">
-              <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+              {% trans %}OGD Switzerland Project{% endtrans %}
+              {#<a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>#}
             </span>
             <br>
         {% endif %}
@@ -57,5 +60,4 @@
 
     {% import 'includes/translations.html' as translations with context %}
     {{ translations.translations_for(article) }}
-    {% include 'includes/taglist.html' %}
 </footer><!-- /.post-info -->
