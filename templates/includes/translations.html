@@ -2,7 +2,7 @@
 {% if article.translations %}
 <span class="label label-default">
 	<i class="fa fa-globe"></i>
-	Translations</span>
+	{% trans %}Translations{% endtrans %}</span>
 {% for translation in article.translations %}
 	<a class="btn btn-sm" href="{{ SITEURL }}/{{ translation.url }}">{{ translation.lang }}</a>
 {% endfor %}
