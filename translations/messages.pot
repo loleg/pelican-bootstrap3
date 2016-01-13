@@ -1,4 +1,4 @@
-#: ../templates/article.html:98 ../templates/front.html:114
+#: ../templates/article.html:98 ../templates/front.html:121
 msgid "Contribute"
 msgstr ""
 
@@ -6,7 +6,7 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: ../templates/article.html:101
+#: ../templates/article.html:102
 msgid ""
 "This is an early draft topic that needs more input. Please consider "
 "adding your expertise here."
@@ -24,17 +24,17 @@ msgstr ""
 msgid "Search topics..."
 msgstr ""
 
-#: ../templates/front.html:111
-msgid "Ask a question"
-msgstr ""
-
 #: ../templates/front.html:112 ../templates/library.html:11
 #: ../templates/ogdch/categories.html:11
 msgid "Library"
 msgstr ""
 
-#: ../templates/front.html:113
+#: ../templates/front.html:115
 msgid "Glossary"
+msgstr ""
+
+#: ../templates/front.html:124
+msgid "Contact us"
 msgstr ""
 
 #: ../templates/includes/article_info.html:4
@@ -61,10 +61,8 @@ msgstr ""
 msgid "Translations"
 msgstr ""
 
-#: ../templates/includes/translations.html:10
-msgid ""
-"Translations are not available everywhere yet: let us know if you need "
-"this content in your language."
+#: ../templates/includes/translations.html:11
+msgid "Send a request"
 msgstr ""
 
 #: ../templates/ogdch/article_info.html:36

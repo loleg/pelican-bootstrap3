@@ -105,14 +105,25 @@
             {% endif %}
             {% endfor %}
             </tr></table>
-          </div>
 
-          <center>
-          <a class="btn btn-default" href="mailto:opendata@bar.admin.ch?subject=OGD-Handbook" role="button">{% trans %}Ask a question{% endtrans %}</a>
-          <a class="btn btn-primary" href="{{ SITEURL }}/category/library">{% trans %}Library{% endtrans %}</a>
-          <a class="btn btn-primary" href="{{ SITEURL }}/library/glossary">{% trans %}Glossary{% endtrans %}</a>
-          <a class="btn btn-default" href="{{ SITEURL }}/pages/contribute">{% trans %}Contribute{% endtrans %}</a>
-          </center>
+            <center>
+              <a class="btn btn-primary" href="{{ SITEURL }}/category/library">
+                <i class="fa fa-book"></i>
+                {% trans %}Library{% endtrans %}</a>
+              <a class="btn btn-primary" href="{{ SITEURL }}/library/glossary">
+                <i class="fa fa-list-alt"></i>
+                {% trans %}Glossary{% endtrans %}</a>
+            </center>
+
+            <center>
+              <a class="btn btn-default" href="{{ SITEURL }}/pages/contribute">
+                <i class="fa fa-check"></i>
+                {% trans %}Contribute{% endtrans %}</a>
+              <a class="btn btn-default" href="mailto:opendata@bar.admin.ch?subject=OGD-Handbook" role="button">
+                <i class="fa fa-inbox"></i>
+                {% trans %}Contact us{% endtrans %}</a>
+            </center>
+          </div>
 
           {% if page.comments == 'enabled' %}
               {% include 'includes/comments.html' %}

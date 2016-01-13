@@ -98,7 +98,9 @@
                 <a class="btn btn-primary btn-sm" href="/{{ DEFAULT_LANG }}/pages/contribute">{% trans %}Contribute{% endtrans %}</a>
                 <a class="btn btn-success btn-sm" target="_blank" href="https://github.com/opendata-swiss/ogd-handbook-wiki/blob/master/{{ article.slug }}.md">{% trans %}Edit{% endtrans %}</a>
                 &nbsp;
-                {% trans %}This is an early draft topic that needs more input. Please consider adding your expertise here.{% endtrans %}
+                <em>
+                  {% trans %}This is an early draft topic that needs more input. Please consider adding your expertise here.{% endtrans %}
+                </em>
               </div>
               {% endif %}
             {% endif %}

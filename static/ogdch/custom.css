@@ -69,6 +69,13 @@ span.logo-color { color: #009688; }
 .category-next h5 { text-align: center; }
 .category-next h5 span {  color: black; }
 
+/* Article information texts */
+
+article em {
+  display: block;
+  font-size: 87%;
+}
+
 /* Styles for library articles */
 .library-info {
   border: 1px solid #aaa;
@@ -108,6 +115,9 @@ checkbox.active .fa { color: #009688; }
 #front-wrapper img {
   width: 100%;
   min-width: 40em;
+}
+#front-wrapper center {
+  margin-top: 2em;
 }
 #front-table {
   width: 95%;

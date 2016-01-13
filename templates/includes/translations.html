@@ -6,9 +6,9 @@
 {% for translation in article.translations %}
 	<a class="btn btn-sm" href="{{ SITEURL }}/{{ translation.url }}">{{ translation.lang }}</a>
 {% endfor %}
-	<a href="mailto:opendata@bar.admin.ch?subject=OGD-Handbook+translate+{{ article.slug }}">
-		<em>{% trans %}Translations are not available everywhere yet: let us know if you need this content in your language.{% endtrans %}</em>
-	</a>
+	<a class="btn btn-default btn-sm" href="mailto:opendata@bar.admin.ch?subject=OGD-Handbook+translate+{{ article.slug }}">
+		<i class="fa fa-inbox"></i>
+		{% trans %}Send a request{% endtrans %}</a>
 <br>
 {% endif %}
 {% endmacro %}

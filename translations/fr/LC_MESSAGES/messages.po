@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-01-13 16:26+0100\n"
+"POT-Creation-Date: 2016-01-13 17:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 1.3\n"
 
-#: ../templates/article.html:98 ../templates/front.html:114
+#: ../templates/article.html:98 ../templates/front.html:121
 msgid "Contribute"
 msgstr "Contribuer"
 
@@ -26,7 +26,7 @@ msgstr "Contribuer"
 msgid "Edit"
 msgstr "Modifier"
 
-#: ../templates/article.html:101
+#: ../templates/article.html:102
 msgid ""
 "This is an early draft topic that needs more input. Please consider "
 "adding your expertise here."
@@ -46,18 +46,18 @@ msgstr "Lecture"
 msgid "Search topics..."
 msgstr "Rechercher..."
 
-#: ../templates/front.html:111
-msgid "Ask a question"
-msgstr "Pose une question"
-
 #: ../templates/front.html:112 ../templates/library.html:11
 #: ../templates/ogdch/categories.html:11
 msgid "Library"
 msgstr "Bibliothèque"
 
-#: ../templates/front.html:113
+#: ../templates/front.html:115
 msgid "Glossary"
 msgstr "Glossaire"
+
+#: ../templates/front.html:124
+msgid "Contact us"
+msgstr "Nous contacter"
 
 #: ../templates/includes/article_info.html:4
 msgid "Published"
@@ -83,17 +83,14 @@ msgstr "Categorie"
 msgid "Translations"
 msgstr "Traductions"
 
-#: ../templates/includes/translations.html:10
-msgid ""
-"Translations are not available everywhere yet: let us know if you need "
-"this content in your language."
-msgstr ""
-"Les traductions ne sont pas encore disponibles partout: laissez-nous "
-"savoir si vous avez besoin de ce contenu dans votre langue."
+#: ../templates/includes/translations.html:11
+#, fuzzy
+msgid "Send a request"
+msgstr "Pose une question"
 
 #: ../templates/ogdch/article_info.html:36
 msgid "OGD Switzerland Project"
-msgstr ""
+msgstr "Projet OGD Suisse"
 
 #: ../templates/ogdch/categories.html:3 ../templates/ogdch/categories.html:25
 #: ../templates/ogdch/navbar.html:32
@@ -138,4 +135,3 @@ msgid "This is a newly released website: click here to report issues"
 msgstr ""
 "Vous êtes à la recherche à un site bêta, s'il vous plaît signaler tous "
 "les problèmes ici."
-
