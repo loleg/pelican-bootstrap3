@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-01-13 17:04+0100\n"
+"POT-Creation-Date: 2016-01-20 10:01+0100\n"
 "PO-Revision-Date: 2015-12-16 07:08+0100\n"
 "Last-Translator: \n"
 "Language-Team: de <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 1.3\n"
 
-#: ../templates/article.html:98 ../templates/front.html:121
+#: ../templates/article.html:98 ../templates/ogdch/footer.html:18
 msgid "Contribute"
 msgstr "Beitragen"
 
@@ -37,26 +37,22 @@ msgstr ""
 msgid "Next"
 msgstr "Nächstes"
 
-#: ../templates/front.html:48
+#: ../templates/front.html:49
 msgid "Start reading"
 msgstr "Weiter lesen"
 
-#: ../templates/front.html:59
-msgid "Search topics..."
-msgstr "Suche nach Themen"
-
-#: ../templates/front.html:112 ../templates/library.html:11
+#: ../templates/front.html:53 ../templates/library.html:11
 #: ../templates/ogdch/categories.html:11
 msgid "Library"
 msgstr "Bibliothek"
 
-#: ../templates/front.html:115
+#: ../templates/front.html:56
 msgid "Glossary"
 msgstr "Glossar"
 
-#: ../templates/front.html:124
-msgid "Contact us"
-msgstr "Kontakte"
+#: ../templates/front.html:67
+msgid "Search topics..."
+msgstr "Suche nach Themen"
 
 #: ../templates/includes/article_info.html:4
 #, fuzzy
@@ -84,7 +80,6 @@ msgid "Translations"
 msgstr "Übersetzungen"
 
 #: ../templates/includes/translations.html:11
-#, fuzzy
 msgid "Send a request"
 msgstr "Fragen stellen"
 
@@ -112,14 +107,23 @@ msgstr "Publizieren"
 msgid "Support"
 msgstr "Supporten"
 
-#: ../templates/ogdch/footer.html:18
+#: ../templates/ogdch/footer.html:23
+msgid "Contact us"
+msgstr "Kontakte"
+
+#: ../templates/ogdch/footer.html:28
+msgid "Legal notice"
+msgstr "Rechtlicher Hinweis"
+
+#: ../templates/ogdch/footer.html:35
 msgid ""
-"The Swiss Open Government Data (OGD) Handbook is being developed on the "
-"basis of documentation produced during the OGD Switzerland project, and "
-"additional established references. As the knowledge base for "
-"opendata.swiss, it provides central access to learning resources: "
-"supporting individuals with responsibilities for data publishing at "
-"government offices nationwide, and open data publishers in general."
+"The Swiss Open Government Data (OGD) Handbook is being developed based on"
+" documentation produced by the OGD Switzerland project, and additional "
+"established references. As the knowledge base for opendata.swiss, it "
+"provides central access to learning resources: supporting individuals "
+"with responsibilities for data publishing at government offices "
+"nationwide, and open data publishers in general. The Swiss Federal "
+"Archives operates the OGD Handbook."
 msgstr ""
 "Die Swiss Open Government Data (OGD) Handbuch wird auf der Grundlage der "
 "Unterlagen und Berichte während des OGD Schweiz Projekt produziert. Wir "
@@ -133,3 +137,4 @@ msgid "This is a newly released website: click here to report issues"
 msgstr ""
 "Sie sind auf einem Beta-Website, bitte mit Verbesserungsvorschläge hier "
 "melden."
+

@@ -1,6 +1,6 @@
 <footer class="container page-footer">
 	<div class="row top-buffer">
-		<div class="col-md-2 col-xs-4">
+		<div class="col-md-2 col-xs-12">
 			<div class="btn-group">
 				<button type="button" id="lang-button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					<span class="name">Deutsch</span> <span class="caret"></span>
@@ -13,9 +13,26 @@
 				</ul>
 			</div>
 		</div>
-		<div class="col-md-10">
+		<div class="col-md-2 col-xs-6">
+			<ul class="list-unstyled">
+				<li><a href="/en/pages/contribute">{% trans %}Contribute{% endtrans %}</a></li>
+			</ul>
+		</div>
+		<div class="col-md-2 col-xs-6">
+			<ul class="list-unstyled">
+				<li><a href="mailto:opendata@bar.admin.ch?subject=OGD-Handbook">{% trans %}Contact us{% endtrans %}</a></li>
+			</ul>
+		</div>
+		<div class="col-md-2 col-xs-6">
+			<ul class="list-unstyled">
+				<li><a href="https://opendata.swiss/{{ DEFAULT_LANG }}/legal-framework/">{% trans %}Legal notice{% endtrans %}</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row top-buffer">
+		<div class="col-xs-12">
 			<p>
-{% trans %}The Swiss Open Government Data (OGD) Handbook is being developed on the basis of documentation produced during the OGD Switzerland project, and additional established references. As the knowledge base for opendata.swiss, it provides central access to learning resources: supporting individuals with responsibilities for data publishing at government offices nationwide, and open data publishers in general.{% endtrans %}
+{% trans %}The Swiss Open Government Data (OGD) Handbook is being developed based on documentation produced by the OGD Switzerland project, and additional established references. As the knowledge base for opendata.swiss, it provides central access to learning resources: supporting individuals with responsibilities for data publishing at government offices nationwide, and open data publishers in general. The Swiss Federal Archives operates the OGD Handbook.{% endtrans %}
 			</p>
 		</div>
 	</div>

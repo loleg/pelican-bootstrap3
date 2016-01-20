@@ -1,4 +1,4 @@
-#: ../templates/article.html:98 ../templates/front.html:121
+#: ../templates/article.html:98 ../templates/ogdch/footer.html:18
 msgid "Contribute"
 msgstr ""
 
@@ -16,25 +16,21 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: ../templates/front.html:48
+#: ../templates/front.html:49
 msgid "Start reading"
 msgstr ""
 
-#: ../templates/front.html:59
-msgid "Search topics..."
-msgstr ""
-
-#: ../templates/front.html:112 ../templates/library.html:11
+#: ../templates/front.html:53 ../templates/library.html:11
 #: ../templates/ogdch/categories.html:11
 msgid "Library"
 msgstr ""
 
-#: ../templates/front.html:115
+#: ../templates/front.html:56
 msgid "Glossary"
 msgstr ""
 
-#: ../templates/front.html:124
-msgid "Contact us"
+#: ../templates/front.html:67
+msgid "Search topics..."
 msgstr ""
 
 #: ../templates/includes/article_info.html:4
@@ -89,17 +85,25 @@ msgstr ""
 msgid "Support"
 msgstr ""
 
-#: ../templates/ogdch/footer.html:18
+#: ../templates/ogdch/footer.html:23
+msgid "Contact us"
+msgstr ""
+
+#: ../templates/ogdch/footer.html:28
+msgid "Legal notice"
+msgstr ""
+
+#: ../templates/ogdch/footer.html:35
 msgid ""
-"The Swiss Open Government Data (OGD) Handbook is being developed on the "
-"basis of documentation produced during the OGD Switzerland project, and "
-"additional established references. As the knowledge base for "
-"opendata.swiss, it provides central access to learning resources: "
-"supporting individuals with responsibilities for data publishing at "
-"government offices nationwide, and open data publishers in general."
+"The Swiss Open Government Data (OGD) Handbook is being developed based on"
+" documentation produced by the OGD Switzerland project, and additional "
+"established references. As the knowledge base for opendata.swiss, it "
+"provides central access to learning resources: supporting individuals "
+"with responsibilities for data publishing at government offices "
+"nationwide, and open data publishers in general. The Swiss Federal "
+"Archives operates the OGD Handbook."
 msgstr ""
 
 #: ../templates/ogdch/navbar.html:7
 msgid "This is a newly released website: click here to report issues"
 msgstr ""
-

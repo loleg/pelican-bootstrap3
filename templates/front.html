@@ -45,7 +45,15 @@
 		        {% endif %}
             {% if page.summary %}
               <div class="lead">{{ page.summary }}</div>
-              <a class="btn btn-default-inverted" href="/category/identify" role="button">{% trans %}Start reading{% endtrans %}</a>
+              <a class="btn btn-default-inverted" href="/category/identify" role="button">
+                {% trans %}Start reading{% endtrans %}</a>
+              &nbsp;
+              <a class="btn btn-primary" href="{{ SITEURL }}/category/library" role="button">
+                <i class="fa fa-book"></i>
+                {% trans %}Library{% endtrans %}</a>
+              <a class="btn btn-primary" href="/en/library/glossary" role="button">
+                <i class="fa fa-puzzle-piece"></i>
+                {% trans %}Glossary{% endtrans %}</a>
             {% endif %}
   				</div>
           <div class="col-md-5 text-md-right text-xs-center">
@@ -105,21 +113,6 @@
             {% endif %}
             {% endfor %}
             </tr></table>
-
-            <center>
-              <a class="btn btn-primary" href="{{ SITEURL }}/category/library">
-                <i class="fa fa-book"></i>
-                {% trans %}Library{% endtrans %}</a>
-              <a class="btn btn-primary" href="/en/library/glossary">
-                <!-- <i class="fa fa-list-alt"></i> -->
-                {% trans %}Glossary{% endtrans %}</a>
-              <a class="btn btn-default" href="/en/pages/contribute">
-                <i class="fa fa-check"></i>
-                {% trans %}Contribute{% endtrans %}</a>
-              <a class="btn btn-default" href="mailto:opendata@bar.admin.ch?subject=OGD-Handbook" role="button">
-                <i class="fa fa-inbox"></i>
-                {% trans %}Contact us{% endtrans %}</a>
-            </center>
           </div>
 
           {% if page.comments == 'enabled' %}
