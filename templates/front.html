@@ -86,7 +86,6 @@
 {% block content %}
     <section id="content" class="body">
         <div class="entry-content">
-          {{ page.content }}
 
           <div id="front-wrapper">
             <img src="/images/OGD_graphics-01.png">
@@ -115,6 +114,8 @@
             </tr></table>
           </div>
 
+          {{ page.content }}
+          
           {% if page.comments == 'enabled' %}
               {% include 'includes/comments.html' %}
           {% endif %}
