@@ -71,8 +71,7 @@ span.logo-color { color: #009688; }
 
 /* Article information texts */
 
-article em {
-  display: block;
+article .alert em {
   font-size: 87%;
 }
 
@@ -90,14 +89,14 @@ checkbox { cursor: pointer; }
 checkbox.active .fa { color: #009688; }
 
 /* Tag lists */
-.btn-sm {
+tags .btn-sm, .tags .btn-sm {
   font-weight: normal;
   border: 1px solid #eee;
   background: #fafafa;
   margin-bottom: 0.3em;
   color: #444;
 }
-.btn-sm:hover { color: #009688; }
+tags .btn-sm:hover, .tags .btn-sm:hover { color: #009688; }
 
 /* Ensure links are readable on splash page */
 .front-header .lead a { color: white; }
