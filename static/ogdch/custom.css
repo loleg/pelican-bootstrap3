@@ -42,6 +42,15 @@ span.logo-color { color: #009688; }
   width: 100%;
 }
 
+/* Wizard microapp */
+#wizard {
+  border: 1px solid #aaa;
+  padding: 1em;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
+  display: inline-block;
+  margin-bottom: 2em;
+}
+
 /* Category banner at top of article.html */
 .entry-summary { font-weight: 600; }
 .article-list .category-banner {
@@ -112,16 +121,16 @@ tags .btn-sm:hover, .tags .btn-sm:hover { color: #009688; }
   overflow-x: auto;
 }
 #front-wrapper img {
-  width: 100%;
+  width: 98%;
   min-width: 40em;
 }
 #front-wrapper center {
   margin-top: 2em;
 }
 #front-table {
-  width: 95%;
+  width: 97%;
   min-width: 39em;
-  margin-left: 5%;
+  margin-left: 3%;
 }
 #front-table td {
   border: none;
