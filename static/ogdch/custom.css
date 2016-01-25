@@ -24,11 +24,11 @@ span.logo-color { color: #009688; }
   vertical-align: top;
   overflow: hidden;
   padding: 10px;
-  height: 16em;
-  border: 2px solid #eee;
+  max-height: 16em;
+  border-bottom: 2px solid #eee;
 }
 .article-list a article .wrapper:hover {
-  border: 2px solid #009688;
+  border-bottom: 2px solid #004a43;
 }
 .article-list a article p {
   color: black;
@@ -40,6 +40,23 @@ span.logo-color { color: #009688; }
 /* Search results */
 .container #tipue_search_input {
   width: 100%;
+}
+.container .tipue_search_content_title a {
+  color: #009688;
+}
+.container .tipue_search_content_title a:hover {
+  color: #004a43;
+}
+.container .tipue_search_content_url a {
+  color: #aaa;
+}
+#tipue_search_foot_boxes li a.tipue_search_foot_box {
+  cursor: pointer;
+}
+#tipue_search_foot_boxes li a.tipue_search_foot_box:hover {
+  background-color: #00635a;
+  border-color: #00635a;
+  color: white;
 }
 
 /* Wizard microapp */

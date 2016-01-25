@@ -3,30 +3,32 @@
     {% if articles %}
       <div class="row article-list">
         {% if category %}
-        <article class="col-md-4">
+        <div class="col-md-3">
           <div class="wrapper">
             <span class="category-banner category-{{ category|lower }}"></span>
           </div>
-        </article>
+        </div>
         {% endif %}
-        {% for article in (articles_page.object_list if articles_page else articles) %}
-        <a href="{{ SITEURL }}/{{ article.url }}">
-          <article class="col-md-4">
-            <div class="wrapper">
-              <h2>{{ article.title }}</h2>
-              {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
-                  <div class="well well-sm">
-                      {% include "ogdch/article_info.html" %}
-                  </div>
-              {% endif %}
-              <div class="summary">{{ article.summary }}
-                  {% include 'includes/comment_count.html' %}
-                  <span class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">more ...</span>
+        <div class="col-md-9">
+          {% for article in (articles_page.object_list if articles_page else articles) %}
+          <a href="{{ SITEURL }}/{{ article.url }}">
+            <article>
+              <div class="wrapper">
+                <h2>{{ article.title }}</h2>
+                {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
+                    <div class="well well-sm">
+                        {% include "ogdch/article_info.html" %}
+                    </div>
+                {% endif %}
+                <div class="summary">{{ article.summary }}
+                    {% include 'includes/comment_count.html' %}
+                    <span class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">more ...</span>
+                </div>
               </div>
-            </div>
-          </article>
-        </a>
-        {% endfor %}
+            </article>
+          </a>
+          {% endfor %}
+        </div>
       </div>
 
       {% if category %}
