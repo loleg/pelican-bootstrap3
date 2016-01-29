@@ -115,7 +115,7 @@ msgstr "Contattaci"
 
 #: ../templates/ogdch/footer.html:28
 msgid "Legal notice"
-msgstr "Note legali"
+msgstr "Quadro giuridico"
 
 #: ../templates/ogdch/footer.html:35
 msgid ""
@@ -140,4 +140,3 @@ msgid "This is a newly released website: click here to report issues"
 msgstr ""
 "Siete alla ricerca di un sito web beta, si prega di segnalare eventuali "
 "problemi qui."
-
